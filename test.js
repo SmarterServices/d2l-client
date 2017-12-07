@@ -17,3 +17,12 @@ client
   .catch(err => {
     console.log(err);
   });
+
+client
+  .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS', 'Rz4qj2f2QKZS0MSQ2-RUzo')
+  .then(data => {
+    console.log(data);
+  })
+  .catch(err => {
+    console.log(err);
+  });
