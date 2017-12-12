@@ -6,6 +6,8 @@ const client = new Client({
   appId: '31brpbcCLsVim_K4jJ8vzw',
   appKey: 'sagYSTT_HOts39qrGQTFWA',
   host: 'https://devcop.brightspace.com',
+  userId: 'Khn0CLf31FiIeI3YLguDaS',
+  userKey: 'Rz4qj2f2QKZS0MSQ2-RUzo',
   port: 443
 });
 
@@ -19,7 +21,7 @@ client
   });
 
 client
-  .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS', 'Rz4qj2f2QKZS0MSQ2-RUzo')
+  .getUserEnrollments()
   .then(data => {
     console.log(data);
   })
