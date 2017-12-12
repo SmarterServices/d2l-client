@@ -1,0 +1,4 @@
+{
+  "getVersions": "/d2l/api/versions/",
+  "getUserEnrollments": "/d2l/api/lp/1.0/enrollments/myenrollments/"
+}
