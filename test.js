@@ -6,25 +6,26 @@ const client = new Client({
   appId: '31brpbcCLsVim_K4jJ8vzw',
   appKey: 'sagYSTT_HOts39qrGQTFWA',
   host: 'https://devcop.brightspace.com',
-  userId: 'Khn0CLf31FiIeI3YLguDaS',
-  userKey: 'Rz4qj2f2QKZS0MSQ2-RUzo',
-  port: 443
+  port: 443,
+  callbackTarget: 'http://abc.com/auth?iid=123'
 });
 
-client
-  .getVersions()
-  .then(data => {
-    console.log(data);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+console.log(client.getAuthenticationUrl());
 
-client
-  .getUserEnrollments()
-  .then(data => {
-    console.log(data);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+// client
+//   .getVersions()
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+
+// client
+//   .getUserEnrollments()
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
