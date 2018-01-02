@@ -30,7 +30,7 @@ client
   });
 
 client
-  .listQuizzes('unstable', '7308')
+  .listQuizzes('unstable', '6606')
   .then(data => {
     console.log(data);
   })
