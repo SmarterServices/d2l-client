@@ -28,3 +28,12 @@ client
   .catch(err => {
     console.log(err);
   });
+
+client
+  .listQuizzes('unstable', '7308')
+  .then(data => {
+    console.log(data);
+  })
+  .catch(err => {
+    console.error(err);
+  });
