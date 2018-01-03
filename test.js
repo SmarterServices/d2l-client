@@ -30,7 +30,7 @@ console.log(client.getAuthenticationUrl());
 //     console.log(err);
 //   });
 client
-  .listQuizzes('unstable', '6606')
+  .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
   .then(data => {
     console.log(JSON.stringify(data, null, 2));
   })
