@@ -29,3 +29,11 @@ console.log(client.getAuthenticationUrl());
 //   .catch(err => {
 //     console.log(err);
 //   });
+client
+  .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  .then(data => {
+    console.log(JSON.stringify(data, null, 2));
+  })
+  .catch(err => {
+    console.error(err);
+  });
