@@ -1,7 +1,7 @@
 {
-  "name": "confirm-io-client",
+  "name": "d2l-client",
   "version": "0.0.1",
-  "description": "Wrapper for confirm.io api to integrate with smarter-proctoring-api.",
+  "description": "Wrapper for d2l api to integrate with smarter-proctoring-api.",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha test/lib/client && nyc report --reporter=lcov",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SmarterServices/confirm.io-client.git"
+    "url": "git+https://github.com/SmarterServices/d2l-client.git"
   },
   "author": "Sajjad Hossain",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SmarterServices/confirm.io-client/issues"
+    "url": "https://github.com/SmarterServices/d2l-client/issues"
   },
-  "homepage": "https://github.com/SmarterServices/confirm.io-client#readme",
+  "homepage": "https://github.com/SmarterServices/d2l-client#readme",
   "dependencies": {
     "joi": "^11.1.1",
     "lodash.get": "^4.4.2",
