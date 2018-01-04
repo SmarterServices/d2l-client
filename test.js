@@ -12,16 +12,13 @@ const client = new Client({
 
 console.log(client.getAuthenticationUrl());
 
-// client
-//   .getVersions()
-// client
-//   .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
-// client
-//   .listQuizzes('1.0', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
-// client
-//   .listClass('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
 client
-  .getUser('1.0', '194', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  // .getVersions()
+  // .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  // .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  // .listClass('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  // .getUser('1.0', '194', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  .listEnrollments('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
   .then(data => {
     console.log(JSON.stringify(data, null, 2));
   })
