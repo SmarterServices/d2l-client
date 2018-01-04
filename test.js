@@ -12,28 +12,14 @@ const client = new Client({
 
 console.log(client.getAuthenticationUrl());
 
-// client
-//   .getVersions()
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
-// client
-//   .getUserEnrollments()
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
 client
-  .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  // .getVersions()
+  // .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  // .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  .listEnrollments('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
   .then(data => {
     console.log(JSON.stringify(data, null, 2));
   })
   .catch(err => {
-    console.error(err);
+    console.error(err.message);
   });
