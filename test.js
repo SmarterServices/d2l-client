@@ -14,26 +14,15 @@ console.log(client.getAuthenticationUrl());
 
 // client
 //   .getVersions()
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
 // client
-//   .getUserEnrollments()
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
+//   .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+// client
+//   .listQuizzes('1.0', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
 client
-  .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  .listClass('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
   .then(data => {
     console.log(JSON.stringify(data, null, 2));
   })
   .catch(err => {
-    console.error(err);
+    console.error(err.message);
   });
