@@ -18,8 +18,10 @@ console.log(client.getAuthenticationUrl());
 //   .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
 // client
 //   .listQuizzes('1.0', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+// client
+//   .listClass('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
 client
-  .listClass('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
+  .getUser('1.0', '194', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
   .then(data => {
     console.log(JSON.stringify(data, null, 2));
   })
