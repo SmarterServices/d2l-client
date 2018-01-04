@@ -1,6 +1,7 @@
 {
   "getVersions": "/d2l/api/versions/",
   "getUserEnrollments": "/d2l/api/lp/1.0/enrollments/myenrollments/",
-  "listQuizzes": "/d2l/api/le/{version}/{orgUnitId}/quizzes/"
+  "listQuizzes": "/d2l/api/le/{version}/{orgUnitId}/quizzes/",
+  "listClass": "/d2l/api/le/{version}/{orgUnitId}/classlist/"
 
 }
