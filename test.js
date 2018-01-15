@@ -3,22 +3,24 @@
 const Client = require('./index');
 
 const client = new Client({
-  appId: '31brpbcCLsVim_K4jJ8vzw',
-  appKey: 'sagYSTT_HOts39qrGQTFWA',
-  host: 'https://devcop.brightspace.com',
+  appId: 'HrwlA6w-MNvp4dwDLz_mVw',
+  appKey: 'fO4fdUSPBbT76NfkB-WpTA',
+  host: 'https://smarterservices.brightspacedemo.com',
   port: 443,
   callbackTarget: 'http://abc.com/auth?iid=123'
 });
 
 console.log(client.getAuthenticationUrl());
 
+
+
 client
   // .getVersions()
-  // .getUserEnrollments('Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
-  // .listQuizzes('unstable', '6606', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
-  .listEnrollments('1.0', '6630', 'Khn0CLf31FiIeI3YLguDaS','Rz4qj2f2QKZS0MSQ2-RUzo')
-  .then(data => {
-    console.log(JSON.stringify(data, null, 2));
+  // .getUserEnrollments('6fLHsBy0hDutfm3sJl6hIs','nXTNNcngESjQYDHjzIr2kz')
+  // .listQuizzes('unstable', '6606', '6fLHsBy0hDutfm3sJl6hIs','nXTNNcngESjQYDHjzIr2kz')
+  .listEnrollments('1.0', '6606', '6fLHsBy0hDutfm3sJl6hIs', 'nXTNNcngESjQYDHjzIr2kz')
+  .then(userList => {
+    console.log(userList);
   })
   .catch(err => {
     console.error(err.message);
