@@ -32,7 +32,8 @@ describe('Client', function testClient() {
         .then(enrollments => {
           enrollments.forEach(enrollment => {
             expect(enrollment.courseId).to.equal(orgUnitId.toString());
-            expect(enrollment).to.have.all.keys(
+
+            const expectedKeys = [
               'courseId',
               'userId',
               'firstName',
@@ -41,7 +42,8 @@ describe('Client', function testClient() {
               'enrollmentState',
               'rootAccountId',
               'role'
-            );
+            ];
+            expect(enrollment).to.have.all.keys(expectedKeys);
           });
         });
     });
