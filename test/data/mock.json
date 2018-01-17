@@ -1,0 +1,90 @@
+{
+  "listClass": {
+    "endpoint": "/d2l/api/le/{version}/{orgUnitId}/classlist/",
+    "method": "GET",
+    "requests": {
+      "valid": {
+        "statusCode": 200,
+        "params": {
+          "version": 1.0,
+          "orgUnitId": 6606
+        },
+        "response": [
+          {
+            "Identifier": "171",
+            "ProfileIdentifier": "ubT2Epyy3R",
+            "DisplayName": "Instructor, D2L.Demo",
+            "Username": null,
+            "OrgDefinedId": "Demo.Instructor",
+            "Email": null
+          },
+          {
+            "Identifier": "172",
+            "ProfileIdentifier": "MuJCSpqz1d",
+            "DisplayName": "Student, Sample",
+            "Username": null,
+            "OrgDefinedId": "Sample.Student",
+            "Email": null
+          }
+        ]
+      },
+      "invalidVersion": {
+        "statusCode": 400,
+        "params": {
+          "version": 2.0,
+          "orgUnitId": 6606
+        }
+      }
+    }
+  },
+  "getUser": {
+    "endpoint": "/d2l/api/lp/{version}/users/{userId}",
+    "method": "GET",
+    "requests": {
+      "demoInstructor": {
+        "statusCode": 200,
+        "params": {
+          "version": 1.0,
+          "userId": "171"
+        },
+        "response": {
+          "OrgId": 6606,
+          "UserId": 171,
+          "FirstName": "D2L.Demo",
+          "MiddleName": "",
+          "LastName": "Instructor",
+          "UserName": "Demo.Instructor",
+          "ExternalEmail": null,
+          "OrgDefinedId": "Demo.Instructor",
+          "UniqueIdentifier": "Demo.Instructor",
+          "Activation": {
+            "IsActive": true
+          },
+          "DisplayName": "D2L.Demo Instructor"
+        }
+      },
+      "sampleStudent": {
+        "statusCode": 200,
+        "params": {
+          "version": 1.0,
+          "userId": "172"
+        },
+        "response": {
+          "OrgId": 6606,
+          "UserId": 172,
+          "FirstName": "Sample",
+          "MiddleName": "",
+          "LastName": "Student",
+          "UserName": "sstudent",
+          "ExternalEmail": null,
+          "OrgDefinedId": "Sample.Student",
+          "UniqueIdentifier": "sstudent",
+          "Activation": {
+            "IsActive": true
+          },
+          "DisplayName": "Sample Student"
+        }
+      }
+    }
+  }
+}

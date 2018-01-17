@@ -4,7 +4,8 @@
   "description": "Wrapper for d2l api to integrate with smarter-proctoring-api.",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha test/lib/client && nyc report --reporter=lcov",
+    "test": "nyc --reporter=text-summary mocha test/lib",
+    "posttest": "nyc report --reporter=lcov",
     "lint": "eslint ./"
   },
   "repository": {
@@ -31,7 +32,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "lodash.isequal": "^4.5.0",
     "mocha": "^3.5.3",
-    "nock": "^9.0.22",
+    "nock": "^9.1.6",
     "nyc": "^11.2.1"
   }
 }
