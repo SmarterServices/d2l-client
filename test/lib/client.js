@@ -58,4 +58,26 @@ describe('Client', function testClient() {
         });
     });
   });
+
+  describe('List quizzes', function testListQuizzes() {
+    it('Should list quizzes for valid arguments', () => {
+      const {version, orgUnitId} = mockData.listQuizzes.requests.valid.params;
+
+      return client
+        .listQuizzes(version, orgUnitId, 'test', 'test')
+        .then(quizzes => {
+          expect(quizzes).to.eql(mockData.listQuizzes.requests.valid.response);
+        });
+    });
+
+    it('Should reject with error for invalid version', () => {
+      const {version, orgUnitId} = mockData.listQuizzes.requests.invalidVersion.params;
+
+      return client
+        .listQuizzes(version, orgUnitId, 'test', 'test')
+        .catch(error => {
+          expect(error.statusCode).to.equal(400);
+        });
+    });
+  });
 });
