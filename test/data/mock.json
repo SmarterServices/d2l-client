@@ -86,5 +86,109 @@
         }
       }
     }
+  },
+  "listQuizzes": {
+    "endpoint": "/d2l/api/le/{version}/{orgUnitId}/quizzes/",
+    "method": "GET",
+    "requests": {
+      "valid": {
+        "params": {
+          "version": "unstable",
+          "orgUnitId": 6606
+        },
+        "statusCode": 200,
+        "response": [
+          {
+            "QuizId": 9,
+            "Name": "test",
+            "AutoExportToGrades": false,
+            "IsActive": false,
+            "GradeItemId": null,
+            "IsAutoSetGraded": false,
+            "Instructions": {
+              "Text": {
+                "Text": "",
+                "Html": ""
+              },
+              "IsDisplayed": false
+            },
+            "Description": {
+              "Text": {
+                "Text": "",
+                "Html": ""
+              },
+              "IsDisplayed": false
+            },
+            "StartDate": null,
+            "EndDate": null,
+            "DisplayInCalendar": false,
+            "SortOrder": 1,
+            "SubmissionTimeLimit": {
+              "IsEnforced": false,
+              "ShowClock": false,
+              "TimeLimitValue": 120
+            },
+            "SubmissionGracePeriod": 5,
+            "LateSubmissionInfo": {
+              "LateSubmissionOption": 0,
+              "LateLimitMinutes": null
+            },
+            "AttemptsAllowed": {
+              "IsUnlimited": false,
+              "NumberOfAttemptsAllowed": 1
+            },
+            "Password": null
+          },
+          {
+            "QuizId": 10,
+            "Name": "JBS",
+            "AutoExportToGrades": false,
+            "IsActive": true,
+            "GradeItemId": null,
+            "IsAutoSetGraded": true,
+            "Instructions": {
+              "Text": {
+                "Text": "",
+                "Html": ""
+              },
+              "IsDisplayed": false
+            },
+            "Description": {
+              "Text": {
+                "Text": "",
+                "Html": ""
+              },
+              "IsDisplayed": false
+            },
+            "StartDate": null,
+            "EndDate": null,
+            "DisplayInCalendar": false,
+            "SortOrder": 2,
+            "SubmissionTimeLimit": {
+              "IsEnforced": false,
+              "ShowClock": false,
+              "TimeLimitValue": 120
+            },
+            "SubmissionGracePeriod": 5,
+            "LateSubmissionInfo": {
+              "LateSubmissionOption": 0,
+              "LateLimitMinutes": null
+            },
+            "AttemptsAllowed": {
+              "IsUnlimited": false,
+              "NumberOfAttemptsAllowed": 1
+            },
+            "Password": null
+          }
+        ]
+      },
+      "invalidVersion": {
+        "params": {
+          "version": 1.0,
+          "orgUnitId": 6606
+        },
+        "statusCode": 400
+      }
+    }
   }
 }

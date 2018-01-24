@@ -5,6 +5,9 @@ const mockData = require('./../data/mock.json');
 const expect = require('chai').expect;
 const {mockD2LEndpoints} = require('./mock');
 
+const TEST_USER_ID = 'test-id';
+const TEST_USER_KEY = 'test-key';
+
 describe('Client', function testClient() {
   const d2lConfig = {
     host: 'https://devcop.brightspace.com',
@@ -28,7 +31,7 @@ describe('Client', function testClient() {
       const {version, orgUnitId} = mockData.listClass.requests.valid.params;
 
       return client
-        .listEnrollments(version, orgUnitId, 'test', 'test')
+        .listEnrollments(version, orgUnitId, TEST_USER_ID, TEST_USER_KEY)
         .then(enrollments => {
           enrollments.forEach(enrollment => {
             expect(enrollment.courseId).to.equal(orgUnitId.toString());
@@ -52,7 +55,29 @@ describe('Client', function testClient() {
       const {version, orgUnitId} = mockData.listClass.requests.invalidVersion.params;
 
       return client
-        .listEnrollments(version, orgUnitId, 'test', 'test')
+        .listEnrollments(version, orgUnitId, TEST_USER_ID, TEST_USER_KEY)
+        .catch(error => {
+          expect(error.statusCode).to.equal(400);
+        });
+    });
+  });
+
+  describe('List quizzes', function testListQuizzes() {
+    it('Should list quizzes for valid arguments', () => {
+      const {version, orgUnitId} = mockData.listQuizzes.requests.valid.params;
+
+      return client
+        .listQuizzes(version, orgUnitId, TEST_USER_ID, TEST_USER_KEY)
+        .then(quizzes => {
+          expect(quizzes).to.eql(mockData.listQuizzes.requests.valid.response);
+        });
+    });
+
+    it('Should reject with error for invalid version', () => {
+      const {version, orgUnitId} = mockData.listQuizzes.requests.invalidVersion.params;
+
+      return client
+        .listQuizzes(version, orgUnitId, TEST_USER_ID, TEST_USER_KEY)
         .catch(error => {
           expect(error.statusCode).to.equal(400);
         });
